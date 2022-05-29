@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  href="../static/commonElementsStyling.css" rel="stylesheet"/>
+    <link  href="../static/myTreatmentsStyling.css" rel="stylesheet"/>
+    <script defer src="projectFunctions.js"></script>
+
+    <script defer src="../static/myTreatmentsFunctions.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" />
+
+
+    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
+
+</head>
+<body id="myTreatmentsBody">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4d866d; opacity:0.6; padding: 2px ;">
+        <div class="container-fluid" style="margin-top:0% ;">
+          <a class="navbar-brand" href="userHomePage.html">
+            <i id="HomeIcon" class="fa fa-home" class="d-inline-block align-text-center" style="font-size: 30px;"></i>
+            my home
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="myTreatments.html">My Treatments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="calander.html">My weekly schedule</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="membership.html">My Membership cards</a>
+            
+            </ul>
+    
+        </div>
+          
+        <button class="logOutButton" onclick="window.location = 'homePageProject.html#jump'" style="width:auto;">Log-Out</button>
+     
+    </div>
+        
+      </nav>
+
+<h1>your booked treatments</h1>
+          <table id="table1">
+            <tr>
+              <th>Date</th>
+              <th>Day</th>
+              <th>Hour</th>
+              <th>Branch</th>
+              <th>Therapist</th>
+              <th>  <button id="remove_button" onclick="removeSelectedRow();">REMOVE</button>
+              </td></th>
+            </tr>
+            <tr>
+              <td>5/6/2022</td>
+              <td>Sunday</td>
+              <td>14:00</th>
+              <td>Tel-Aviv</td>
+              <td>Alon</td>
+            </tr>
+            <tr>
+              <td>6/6/2022</td>
+               <td>Monday</td>
+              <td>09:00</th>
+              <td>Tel-Aviv</td>
+              <td>Lina</td>
+            </tr>
+            <tr>
+              <td>8/6/2022</td>
+              <td>Wednesday</td>
+              <td>15:00</th>
+              <td>Beer-Sheva</td>
+              <td>Segev</th>
+            </tr>
+            <tr>
+              <td>9/6/2022</td>
+              <td>Thursday</td>
+              <td>11:00</th>
+              <td>Beer-Sheva</td>
+              <td>Ella</th>
+            </tr>
+            <tr>
+            
+             
+            </tr>
+          </table>
+            <br>
+          <div id="explanationn"> Click a treatment and then the REMOVE button to remove it</div>
+          <br>
+
+          <button id="addTreat" class="addTreat" onclick="chooseKindShow()" >Order additional treatment</button>
+<span id="chooseKind">
+          
+      
+                            <select id="kindsList" list="Choosekind" name="Choosekind" placeholder="choose treatment" required onchange="GetSelect()"><br>
+                                <option value="reflexology"> reflexology</option>
+                                <option value="Chinese Acupuncture">Chinese Acupuncture</option>
+                                <option value="Shiatsu therapy"> Shiatsu therapy</option>
+                                </select>
+          
+          
+            </span> 
+
+            <button id="Search"  class="btn" >Search For Treatment</button>
+            <button id="cancleOrder" onclick="chooseKindHide()">cancle</button>
+
+<!-- The Modal -->
+<div id="myModalC" class="modalB">
+ 
+  <div class="modal-contentB" > 
+    <span  class="close2">&times;</span>
+    <h4 id="MISSING" class="title" >  ------ MISSING INPUT ----- 
+      <br>
+      Please select a treatment type </h4>
+
+  
+  </div>
+</div>
+
+
+
+
+<!-- The Modal -->
+<div id="myModalB" class="modalB">
+
+  <!-- Modal content -->
+  <div class="modal-contentB" id="innerModal">
+    <span class="close">&times;</span>
+    <br> <label  class="title" id="TypeOf"> </label><br>
+    <h4  class="title" >How Do You Want To Filter?</h4>
+
+    <button id="ShowAllBtn"  class="btnTEXT" >Show all </button>
+    <button id="b" class="btnTEXT" onclick="sortByDate()"> closest date possible</button>
+    <!-- <button id="ShowNearestBranchBtn"  onclick="GetLocation()" sclass="btnTEXT" > The nearest branch</button>
+    <p id="p1"></p> -->
+    <button id="button" class="btnTEXT" onclick="GetLocation()" >The nearest branch </button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+
+<span id="details">
+
+  <table id="results" class="w3-table-all">
+    <thead>
+      <tr class="header">
+        <th id="datetime" class="Date" scope="col"> Date </th>
+        <th id="DayTitle" class="Day" scope="col">Day</th>
+        <th id="HourTitle" class="Houe" scope="col">Hour</th>
+        <th id="BranchTitle" class="Branch" scope="col">Branch</th>
+        <th id="TherapistTitle" class="Therapist" scope="col">Therapist</th>
+        <th class="Select" scope="col">Selecet treatment</th>
+      </tr>
+      <thead>
+        <tbody>
+      <tr class="item"> 
+        <td id="date1">04/06/2022</td>      
+        <td id="Day1" class="Day"><h6>Saturday</h6></td>
+        <td id="Hour1" class="Hour">18:00</td>
+        <td id="Branch1" class="Branch">Beersheva</td>
+        <td id="Therapist1" class="Therapist">Therapist1</td>
+        <td class="Select1" ><button id="SelectBut1" class="SelectButs" onclick="myFunction('04/06/2022','Saturday','18:00','Beersheva','Therapist1')" > Select</button></td>
+      </tr>
+      <tr class="item" >
+        <td id="date2">03/06/2022</td>           
+        <td id="Day2" class="Day"><h6>Friday</h6></td>
+        <td id="Hour2" class="Houe">16:00</td>
+        <td id="Branch2" class="Branch">Tel Aviv</td>
+        <td id="Therapist2" class="Therapist">Therapist2</td>
+        <td class="Select" ><button id="SelectBut2" class="SelectButs" onclick="myFunction('03/06/2022','Friday','16:00','Tel Aviv','Therapist2')">Selecet</button></td>
+      </tr>
+      <tr class="item">
+        <td id="date3">07/06/2022</td>      
+        <td id="Day3" class="Day"><h6>Tuesday</h6></td> 
+        <td id="Hour3" class="Houe">15:00</td>
+        <td id="Branch3" class="Branch">Beersheva</td>
+        <td id="Therapist3" class="Therapist">Therapist3</td>
+        <td class="Select" ><button id="SelectBut3" class="SelectButs" onclick="myFunction('07/06/2022','Tuesday','16:00','Beersheva','Therapist3')">Selecet</button></td>
+      </tr>
+      <tr class="item">
+        <td id="date4">01/06/2022</td>      
+        <td id="Day4" class="Day"><h6>Wednesday</h6></td>
+        <td id="Hour4" class="Houe">09:00</td>
+        <td id="Branch4" class="Branch">Beersheva</td>
+        <td id="Therapist4" class="Therapist">Therapist4</td>
+        <td class="Select" ><button id="SelectBut4" class="SelectButs" onclick="myFunction('01/06/2022','Wednesday','09:00','Beersheva','Therapist')">Selecet</button></td>
+      </tr>
+      <tr class="item">
+        <td id="date4">31/05/2022</td>      
+        <td id="Day4" class="Day"><h6>Tuesday</h6></td>
+        <td id="Hour4" class="Houe">09:00</td>
+        <td id="Branch4" class="Branch">Beersheva</td>
+        <td id="Therapist4" class="Therapist">Therapist4</td>
+        <td class="Select" ><button id="SelectBut4"class="SelectButs" onclick="myFunction('31/05/2022','Tuesday','09:00','Beersheva','Therapist4')" >Selecet</button></td>
+      </tr>
+      <tr class="item">
+        <td id="date1">09/06/2022</td>      
+        <td id="Day4" class="Day"> <h6>Thursday</h6></td>
+        <td id="Hour4" class="Houe">10:00</td>
+        <td id="Branch4" class="Branch">Beersheva</td>
+        <td id="Therapist4" class="Therapist">Therapist4</td>
+        <td class="Select" ><button id="SelectBut4" class="SelectButs"  onclick="myFunction('09/06/2022','Thursday','09:00','Beersheva','Therapist4')"  >Selecet</button></td>
+      </tr>
+     
+    </tbody>
+    </table>
+  
+
+
+
+</span>
+
+
+
+  </div>
+
+</div>
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,414 @@
+
+:root {
+    --green:rgb(41, 77, 44);
+    --darkgreen:rgb(9, 63, 33);
+    --darkgreen2:rgb(43, 74, 57);
+    --darkgreen3: rgb(138, 138, 112);
+    --darkWhite : rgb(232, 226, 226);
+    --darkWhite2 : rgb(107, 135, 119); 
+    --darkWhite3 : rgb(117, 141, 127);  
+ 
+    --lightgreen : rgb(70, 101, 82); 
+
+    --White : rgb(255, 255, 255);   
+    --grey : rgb(165, 178, 171);   
+}
+
+
+@font-face{
+    font-family: font1;
+    src: url(MPLUSCodeLatin-VariableFont_wdth,wght.ttf)
+}
+@font-face{
+    font-family: font2;
+    src: url(SignikaNegative-VariableFont_wght.ttf)
+}
+
+@font-face{
+    font-family: font3;
+    src: url(ZenLoop-Regular.ttf)
+}
+
+body {
+    background-image: url(backGroundBetonT2.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+
+}
+
+#contactBody{
+    background-image: url(backGroundBetonT1.jpg);
+}
+
+#userHomeBody{
+    background-image: url(backGroundBetonT2.jpg);
+}
+#signUpBody{
+    background-image: url(backGroundBetonT2.jpg);
+}
+#aboutUsBody{
+    background-image: url(backGroundBetonT1.jpg);
+}
+
+
+.navBar {
+    display: grid; 
+    padding: 0px 0px; 
+    grid-template-areas: 'navi navi';
+    width: 100%;
+    grid-area: Header;
+}
+
+#homeNav, #conNav{
+    grid-area: navi;
+}
+
+li {
+    display: inline;
+    margin-left: 20px;
+    text-align:center;
+    margin: 80px;
+
+}
+
+a{
+    color: var(--darkgreen2);
+    font-size :22px;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    font-family: font1;
+}
+a:hover{
+    color: var(--darkgreen2);
+    font-size :20px;
+    text-decoration: none;
+    background-color:var(--darkWhite);
+    padding: 13px;
+    border-radius:10px ;
+    
+}
+
+.active{
+    color: var(--darkWhite);
+    font-size :20px;
+    text-decoration: none;
+    background-color:var(--darkWhite2);
+    padding: 5px;
+    border-radius:10px ;
+
+}
+.logoGif{
+    grid-area: Nav;
+    
+    width: 180px;
+    height: 60px;
+    align-items: center;
+    margin: 10 auto;
+    margin-left: 100px;
+    margin-top: 40px;
+    opacity: 0.6;
+}
+.textHome{
+    grid-area: Main;
+    text-align: left;
+    display: table;
+    margin-left: 300px;
+    color:var( --darkWhite2) ;
+    font-size :30px;
+    padding: 100px;
+    font-family: font2;
+
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    'Header Header Header'
+    'Nav Main Main'
+    'Nav Main Main';
+}
+#Welcome{
+    font-size :50px;
+    color:var( --darkWhite2) ;
+
+   
+}
+
+.click, .clickSignIn{
+    width: 180px;
+    background-color: var(--darkWhite3);   
+    font-size :20px;
+    font-family:font2;
+    border:5px solid var(--darkWhite3); 
+    border-radius: 10px;
+    color: var(--darkWhite);  
+}
+.clickSignIn{
+    margin-left: 100px;
+    width: 100px; 
+    background-color: var(--White);  
+    color: var(--darkgreen2);  
+    border:2px solid var(--darkgreen2); 
+
+ 
+
+
+}
+#logIn{
+    width: 75px; 
+    font-size :13px;
+
+}
+
+.click:hover ,.clickSignIn:hover, .userOption:hover {
+    transform: translateY(7px);
+  }
+
+ #logInDiv{
+    display: table;
+    margin-left:1050px ;
+    color:var(--lightgreen) ;
+    font-size :12px;
+    text-align: left;
+    font-family:font2;
+    padding: 0px;
+    display: none;
+    position: absolute;
+  }
+
+
+  #getDetails,#aboutUsText {
+    display: table;
+    margin: 0 auto;
+    color:var(--lightgreen) ;
+    font-size :16px;
+    text-align: center;
+    font-family:font2;
+    padding: 50px;
+    background-color: white;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.7;
+    border-radius: 20px;
+}
+#aboutUsText {
+    align-items: center;
+    margin: 50px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-left: 500px;
+    background-color:var(--darkWhite3);
+    color: var(--White);
+    font-size :18px;
+}
+
+
+#getDetailsContact{
+    display: table;
+    margin-left:550px ;
+    color:var(--lightgreen) ;
+    font-size :16px;
+    text-align: left;
+    font-family:font2;
+    padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+
+}
+.dataContact{
+    padding: 15px;
+    width: 200px;
+    height: 6px;
+    text-align: center;
+    border-bottom: 3px solid rgb(44, 51, 44);
+    background-color:transparent;
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    border-radius: 0px;
+}
+
+
+.dataSignIn{
+    padding: 10px;
+    width: 100px;
+    height: 6px;
+    text-align: center;
+    border-bottom: 1.5px solid rgb(44, 51, 44);
+    background-color:var(--lightgreen);
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    border-radius: 5px;
+}
+
+
+#freeTextContact{
+    width: 400px;
+}
+
+input{
+    padding: 15px;
+    width: 200px;
+    height: 6px;
+    background-color:white;
+    color: var(--darkWhite);
+    text-align: center;
+    border-radius: 7px;
+    border: 1px solid rgb(176, 176, 176);
+    box-shadow: 4px 4px 4px;
+
+}
+
+.imHome{
+    opacity: 0.8;
+
+}
+.imHome:hover{
+    opacity:1;
+}
+
+
+
+
+#containerUserHome{
+    display: grid;
+    grid-template-areas: 
+    'Header Header Header'
+    'Nav Main option1'
+    'Nav Main option2'
+    'Nav Main option3';
+    
+}
+
+
+#MyTreatments{
+    margin: 20px;
+    grid-area: option1;
+}
+ #schedule{
+    margin: 20px;
+    grid-area: option2;
+}
+ #Membership{
+    margin: 20px;
+    grid-area: option3;
+}
+
+#MyTreatments, #schedule,  #Membership{
+    margin-left: 500px;
+    width: 230px;
+    background-color: var(--grey);   
+    font-size :20px;
+    font-family:font2;
+    border:5px solid var(--grey); 
+    border-radius: 10px;
+    color: var(--White);  
+    padding:20px ;
+    opacity:0.8;
+
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+  }
+  
+  #message p {
+    padding: 10px 35px;
+    font-size: 18px;
+  }
+  
+  /* Add a green text color and a checkmark when the requirements are right */
+  .valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -35px;
+    content: "\2714";
+  }
+  
+  /* Add a red text color and an "x" icon when the requirements are wrong */
+  .invalid {
+    color: red;
+    content: "\2716";
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -35px;
+    content: "\2716";
+  }
+
+  #checkbox{
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+  }
+
+
+  .container_about_us {
+    display: flex;
+    width: 100%;
+    padding: 4% 2%;
+    box-sizing: border-box;
+    height: 100vh;
+  }
+  
+  .box {
+    flex: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin: 0 2%;
+    box-shadow: 0 20px 30px rgba(0,0,0,.1);
+    line-height: 0;
+    font-family:font2;
+
+  }
+  
+  .box > img {
+    width: 200%;
+    height: calc(100% - 10vh);
+    object-fit: cover; 
+    transition: .5s;
+  }
+  
+  .box > span {
+    font-size: 3.8vh;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
+  }
+  
+  .box:hover { flex: 1 1 50%; }
+  .box:hover > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #treatmentsHead{
+    color:var(--lightgreen) ;
+    font-size :35px;
+    text-align: center;
+    font-family:font2;
+    margin-top: 30px;
+  }
+
+

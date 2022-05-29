@@ -1,0 +1,69 @@
+:root {
+    --green:rgb(41, 77, 44);
+    --darkgreen:rgb(9, 63, 33);
+    --darkgreen2:rgb(43, 74, 57);
+    --darkgreen3: rgb(138, 138, 112);
+    --darkWhite : rgb(232, 226, 226);
+    --darkWhite2 : rgb(157, 181, 167);  
+    --lightgreen : rgb(70, 101, 82); 
+    --White : rgb(255, 255, 255);   
+}
+
+body{
+    background-image: url(backGroundBetonT13.jpg);
+  }
+  
+
+#table_buttons{
+    color: white;
+    font-size: 15px;
+    padding: 12px 18px;
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px;
+}
+
+
+.Acupuncture_button{
+    background-color:rgb(47, 94, 66);
+    
+}
+
+.reflexology_button{
+    background-color: rgb(121, 186, 142);
+
+}
+
+.Shiatsu_button{
+    background-color:rgb(105, 111, 103);
+
+}
+
+#table_buttons:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+#table_buttons:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+
+  .myTable{
+      margin-top: 30px;
+      margin-bottom: 60px;
+
+  }
+
+h1{
+    text-align: center;
+    padding: 30px;
+    color:rgb(49, 74, 51);
+    font-size: 20px;
+}
